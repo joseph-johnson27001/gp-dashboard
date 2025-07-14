@@ -5,7 +5,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: "GP Dashboard",
+      title: "Template Dashboards - GP Dashboard",
       link: [
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
