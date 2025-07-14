@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
@@ -6,6 +5,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      title: "GP Dashboard",
       link: [
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {

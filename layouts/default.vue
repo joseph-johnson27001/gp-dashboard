@@ -25,7 +25,7 @@
         <ul>
           <li>
             <NuxtLink to="/" class="nav-link" exact-active-class="active">
-              <Icon name="mdi:stethoscope" />
+              <Icon name="mdi:home-outline" />
               <span class="label">Dashboard</span>
             </NuxtLink>
           </li>
@@ -145,7 +145,7 @@ function toggleSidebar() {
 
 /* Label text */
 .label {
-  margin-left: 1rem;
+  margin-left: 5px;
   white-space: nowrap;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
