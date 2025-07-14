@@ -17,6 +17,11 @@ export default defineNuxtConfig({
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&family=Inter&family=Roboto:wght@300;400;500&family=Unica+One&display=swap",
         },
+        {
+          rel: "stylesheet",
+          href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css",
+          referrerpolicy: "no-referrer",
+        },
       ],
     },
   },

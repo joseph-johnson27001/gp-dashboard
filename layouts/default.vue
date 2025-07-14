@@ -25,7 +25,7 @@
         <ul>
           <li>
             <NuxtLink to="/" class="nav-link" exact-active-class="active">
-              <Icon name="mdi:home-outline" />
+              <i class="fa-solid fa-house"></i>
               <span class="label">Dashboard</span>
             </NuxtLink>
           </li>
@@ -35,7 +35,7 @@
               class="nav-link"
               exact-active-class="active"
             >
-              <Icon name="mdi:calendar-check" />
+              <i class="fa-solid fa-calendar-check"></i>
               <span class="label">Appointments</span>
             </NuxtLink>
           </li>
@@ -45,7 +45,7 @@
               class="nav-link"
               exact-active-class="active"
             >
-              <Icon name="mdi:pill" />
+              <i class="fa-solid fa-pills"></i>
               <span class="label">Medications</span>
             </NuxtLink>
           </li>
@@ -55,7 +55,7 @@
               class="nav-link"
               exact-active-class="active"
             >
-              <Icon name="mdi:flask" />
+              <i class="fa-solid fa-vial"></i>
               <span class="label">Lab Results</span>
             </NuxtLink>
           </li>
@@ -65,7 +65,7 @@
               class="nav-link"
               exact-active-class="active"
             >
-              <Icon name="mdi:account" />
+              <i class="fa-solid fa-user"></i>
               <span class="label">Patient Info</span>
             </NuxtLink>
           </li>
@@ -136,10 +136,11 @@ function toggleSidebar() {
   background: #4a5568;
 }
 
-/* Icon inside nav */
-.nav-link svg {
+/* Font Awesome icons */
+.nav-link i {
   width: 24px;
-  height: 24px;
+  text-align: center;
+  font-size: 18px;
   flex-shrink: 0;
 }
 
