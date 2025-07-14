@@ -35,14 +35,13 @@ const kpis = [
 .dashboard {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 /* Patient name and age */
 .patient-name {
   font-size: 1.75rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
 }
 
 /* KPI Grid Layout */
