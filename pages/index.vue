@@ -16,6 +16,7 @@
         v-for="(graph, index) in graphs"
         :key="index"
         :title="graph.title"
+        :chartOptions="graph.chartOptions"
       />
     </div>
   </div>
@@ -38,11 +39,62 @@ const kpis = [
   { title: "Allergies", value: "Penicillin" },
 ];
 
+// Define chart options for each graph separately
 const graphs = [
-  { title: "Weight Over Time" },
-  { title: "BMI Over Time" },
-  { title: "Blood Pressure Trends" },
-  { title: "Heart Rate Trends" },
+  {
+    title: "Weight Over Time",
+    chartOptions: {
+      tooltip: { trigger: "axis" },
+      xAxis: {
+        type: "category",
+        data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      },
+      yAxis: { type: "value" },
+      series: [
+        { name: "Weight", type: "line", data: [72, 73, 71, 74, 72, 75, 73] },
+      ],
+    },
+  },
+  {
+    title: "BMI Over Time",
+    chartOptions: {
+      tooltip: { trigger: "axis" },
+      xAxis: { type: "category", data: ["Jan", "Feb", "Mar", "Apr", "May"] },
+      yAxis: { type: "value" },
+      series: [
+        { name: "BMI", type: "line", data: [22.9, 23.0, 23.1, 23.2, 23.1] },
+      ],
+    },
+  },
+  {
+    title: "Blood Pressure Trends",
+    chartOptions: {
+      tooltip: { trigger: "axis" },
+      xAxis: {
+        type: "category",
+        data: ["Week 1", "Week 2", "Week 3", "Week 4"],
+      },
+      yAxis: { type: "value" },
+      series: [
+        { name: "Systolic", type: "line", data: [120, 122, 118, 121] },
+        { name: "Diastolic", type: "line", data: [80, 82, 79, 81] },
+      ],
+    },
+  },
+  {
+    title: "Heart Rate Trends",
+    chartOptions: {
+      tooltip: { trigger: "axis" },
+      xAxis: {
+        type: "category",
+        data: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
+      },
+      yAxis: { type: "value" },
+      series: [
+        { name: "Heart Rate", type: "line", data: [70, 72, 75, 73, 71] },
+      ],
+    },
+  },
 ];
 </script>
 

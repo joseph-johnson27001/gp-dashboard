@@ -1,17 +1,21 @@
 <template>
   <div class="graph-card">
-    <div class="header">
+    <div class="graph-header">
       <h2 class="title">{{ title }}</h2>
-      <select class="timescale-select" v-model="selectedScale">
-        <option value="1M">1M</option>
-        <option value="3M">3M</option>
-        <option value="6M">6M</option>
-        <option value="1Y">1Y</option>
+      <select
+        class="time-range-select"
+        v-model="selectedRange"
+        @change="onRangeChange"
+      >
+        <option value="7">7D</option>
+        <option value="30">1M</option>
+        <option value="90">3M</option>
+        <option value="365">1Y</option>
       </select>
     </div>
 
-    <div class="chart-placeholder">
-      <slot />
+    <div class="chart-wrapper">
+      <VChart :option="chartOptions" autoresize />
     </div>
   </div>
 </template>
@@ -19,11 +23,18 @@
 <script setup>
 import { ref } from "vue";
 
-defineProps({
+const props = defineProps({
   title: String,
+  chartOptions: Object,
 });
 
-const selectedScale = ref("1M");
+const emit = defineEmits(["update-range"]);
+
+const selectedRange = ref("30");
+
+function onRangeChange() {
+  emit("update-range", selectedRange.value);
+}
 </script>
 
 <style scoped>
@@ -36,8 +47,7 @@ const selectedScale = ref("1M");
   flex-direction: column;
 }
 
-/* Header layout */
-.header {
+.graph-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,27 +57,16 @@ const selectedScale = ref("1M");
 .title {
   font-weight: 600;
   font-size: 1.1rem;
-  margin: 0;
 }
 
-.timescale-select {
-  background: #f1f5f9;
-  border: 1px solid #cbd5e1;
+.time-range-select {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
   border-radius: 6px;
-  padding: 4px 8px;
-  font-size: 0.9rem;
-  color: #334155;
-  cursor: pointer;
+  border: 1px solid #cbd5e1;
 }
 
-.chart-placeholder {
+.chart-wrapper {
   height: 300px;
-  background: #f1f5f9;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #94a3b8;
-  font-size: 0.9rem;
 }
 </style>
