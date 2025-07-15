@@ -87,7 +87,7 @@ const graphs = [
 .graph-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr));
 }
 
 @media (min-width: 540px) {
@@ -102,9 +102,9 @@ const graphs = [
   }
 }
 
-@media (min-width: 1000px) {
+@media (max-width: 1200px) {
   .graph-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
   }
 }
 

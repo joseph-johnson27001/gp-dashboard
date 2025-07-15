@@ -51,7 +51,6 @@ function onRangeChange() {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5rem;
 }
 
 .title {
