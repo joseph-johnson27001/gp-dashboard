@@ -10,6 +10,14 @@
         :value="kpi.value"
       />
     </div>
+
+    <div class="graph-grid">
+      <GraphCard
+        v-for="(graph, index) in graphs"
+        :key="index"
+        :title="graph.title"
+      />
+    </div>
   </div>
 </template>
 
@@ -29,16 +37,22 @@ const kpis = [
   { title: "Last Visit", value: "2025-07-01" },
   { title: "Allergies", value: "Penicillin" },
 ];
+
+const graphs = [
+  { title: "Weight Over Time" },
+  { title: "BMI Over Time" },
+  { title: "Blood Pressure Trends" },
+  { title: "Heart Rate Trends" },
+];
 </script>
 
 <style scoped>
 .dashboard {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 
-/* Patient name and age */
 .patient-name {
   font-size: 1.75rem;
   font-weight: 600;
@@ -50,6 +64,12 @@ const kpis = [
   grid-template-columns: repeat(1, 1fr);
 }
 
+.graph-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
 @media (min-width: 540px) {
   .kpi-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -59,6 +79,12 @@ const kpis = [
 @media (min-width: 768px) {
   .kpi-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .graph-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
