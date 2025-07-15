@@ -50,7 +50,7 @@ const graphs = [
 .dashboard {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .patient-name {
@@ -66,7 +66,7 @@ const graphs = [
 
 .graph-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
   grid-template-columns: 1fr;
 }
 

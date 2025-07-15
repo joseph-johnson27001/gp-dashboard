@@ -21,7 +21,6 @@ defineProps({
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .title {
@@ -31,7 +30,7 @@ defineProps({
 }
 
 .chart-placeholder {
-  height: 200px;
+  height: 300px;
   background: #f1f5f9;
   border-radius: 8px;
   display: flex;
