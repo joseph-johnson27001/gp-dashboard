@@ -14,4 +14,11 @@ export const heartRateGraph: EChartsOption = {
       data: [70, 72, 75, 73, 71],
     },
   ],
+  grid: {
+    top: 30,
+    right: 20,
+    bottom: 20,
+    left: 20,
+    containLabel: true,
+  },
 };

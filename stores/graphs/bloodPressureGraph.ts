@@ -19,4 +19,11 @@ export const bloodPressureGraph: EChartsOption = {
       data: [80, 82, 79, 81],
     },
   ],
+  grid: {
+    top: 30,
+    right: 20,
+    bottom: 20,
+    left: 20,
+    containLabel: true,
+  },
 };

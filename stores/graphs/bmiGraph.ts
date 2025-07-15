@@ -14,4 +14,11 @@ export const bmiGraph: EChartsOption = {
       data: [22.9, 23.0, 23.1, 23.2, 23.1],
     },
   ],
+  grid: {
+    top: 30,
+    right: 20,
+    bottom: 20,
+    left: 20,
+    containLabel: true,
+  },
 };

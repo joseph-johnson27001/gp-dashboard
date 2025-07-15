@@ -17,6 +17,13 @@ export const weightGraph: EChartsOption = {
     },
     axisLine: { show: false },
   },
+  grid: {
+    top: 30,
+    right: 20,
+    bottom: 20,
+    left: 20,
+    containLabel: true,
+  },
   series: [
     {
       name: "Weight",

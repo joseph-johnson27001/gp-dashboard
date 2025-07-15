@@ -56,10 +56,11 @@ function onRangeChange() {
 .title {
   font-weight: 600;
   font-size: 1.1rem;
+  padding: 5px;
 }
 
 .time-range-select {
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem;
   font-size: 0.85rem;
   border-radius: 6px;
   border: 1px solid #cbd5e1;
