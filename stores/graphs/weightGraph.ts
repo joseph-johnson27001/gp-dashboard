@@ -10,7 +10,7 @@ export const weightGraph: EChartsOption = {
   series: [
     {
       name: "Weight",
-      type: "line",
+      type: "bar",
       data: [72, 73, 71, 74, 72, 75, 73],
     },
   ],

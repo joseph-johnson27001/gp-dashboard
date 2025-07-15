@@ -48,12 +48,12 @@ const kpis = [
 // Add chartOptions from imported graphs
 const graphs = [
   {
-    title: "Weight Over Time",
-    chartOptions: weightGraph,
-  },
-  {
     title: "BMI Over Time",
     chartOptions: bmiGraph,
+  },
+  {
+    title: "Weight Over Time",
+    chartOptions: weightGraph,
   },
   {
     title: "Blood Pressure Trends",
