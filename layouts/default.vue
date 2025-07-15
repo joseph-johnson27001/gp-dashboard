@@ -2,12 +2,16 @@
   <div class="layout collapsed">
     <aside class="sidebar">
       <img src="/dashboard-logo.png" alt="Dashboard Logo" class="logo" />
-
       <nav>
         <ul>
           <li>
-            <NuxtLink to="/" class="nav-link" exact-active-class="active">
-              <i class="fa-solid fa-house"></i>
+            <NuxtLink
+              to="/"
+              class="nav-link"
+              exact-active-class="active"
+              title="Dashboard"
+            >
+              <i class="fa-solid fa-house" title="Dashboard"></i>
             </NuxtLink>
           </li>
           <li>
@@ -15,8 +19,9 @@
               to="/appointments"
               class="nav-link"
               exact-active-class="active"
+              title="Appointments"
             >
-              <i class="fa-solid fa-calendar-check"></i>
+              <i class="fa-solid fa-calendar-check" title="Appointments"></i>
             </NuxtLink>
           </li>
           <li>
@@ -24,8 +29,9 @@
               to="/medications"
               class="nav-link"
               exact-active-class="active"
+              title="Medications"
             >
-              <i class="fa-solid fa-pills"></i>
+              <i class="fa-solid fa-pills" title="Medications"></i>
             </NuxtLink>
           </li>
           <li>
@@ -33,8 +39,9 @@
               to="/lab-results"
               class="nav-link"
               exact-active-class="active"
+              title="Lab Results"
             >
-              <i class="fa-solid fa-vial"></i>
+              <i class="fa-solid fa-vial" title="Lab Results"></i>
             </NuxtLink>
           </li>
           <li>
@@ -42,8 +49,9 @@
               to="/patient-info"
               class="nav-link"
               exact-active-class="active"
+              title="Patient Info"
             >
-              <i class="fa-solid fa-user"></i>
+              <i class="fa-solid fa-user" title="Patient Info"></i>
             </NuxtLink>
           </li>
         </ul>
