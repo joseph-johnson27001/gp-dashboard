@@ -1,6 +1,15 @@
 <template>
   <div class="graph-card">
-    <h2 class="title">{{ title }}</h2>
+    <div class="header">
+      <h2 class="title">{{ title }}</h2>
+      <select class="timescale-select" v-model="selectedScale">
+        <option value="1M">1M</option>
+        <option value="3M">3M</option>
+        <option value="6M">6M</option>
+        <option value="1Y">1Y</option>
+      </select>
+    </div>
+
     <div class="chart-placeholder">
       <slot />
     </div>
@@ -8,9 +17,13 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
+
 defineProps({
   title: String,
 });
+
+const selectedScale = ref("1M");
 </script>
 
 <style scoped>
@@ -23,10 +36,28 @@ defineProps({
   flex-direction: column;
 }
 
+/* Header layout */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
 .title {
   font-weight: 600;
   font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  margin: 0;
+}
+
+.timescale-select {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 0.9rem;
+  color: #334155;
+  cursor: pointer;
 }
 
 .chart-placeholder {
