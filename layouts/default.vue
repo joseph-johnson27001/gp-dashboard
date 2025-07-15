@@ -2,56 +2,53 @@
   <div class="layout collapsed">
     <aside class="sidebar">
       <img src="/dashboard-logo.png" alt="Dashboard Logo" class="logo" />
+
       <nav>
         <ul>
-          <li>
-            <NuxtLink
-              to="/"
-              class="nav-link"
-              exact-active-class="active"
-              title="Dashboard"
-            >
-              <i class="fa-solid fa-house" title="Dashboard"></i>
+          <li class="nav-item">
+            <NuxtLink to="/" class="nav-link" exact-active-class="active">
+              <i class="fa-solid fa-house"></i>
+              <span class="tooltip">Dashboard</span>
             </NuxtLink>
           </li>
-          <li>
+          <li class="nav-item">
             <NuxtLink
               to="/appointments"
               class="nav-link"
               exact-active-class="active"
-              title="Appointments"
             >
-              <i class="fa-solid fa-calendar-check" title="Appointments"></i>
+              <i class="fa-solid fa-calendar-check"></i>
+              <span class="tooltip">Appointments</span>
             </NuxtLink>
           </li>
-          <li>
+          <li class="nav-item">
             <NuxtLink
               to="/medications"
               class="nav-link"
               exact-active-class="active"
-              title="Medications"
             >
-              <i class="fa-solid fa-pills" title="Medications"></i>
+              <i class="fa-solid fa-pills"></i>
+              <span class="tooltip">Medications</span>
             </NuxtLink>
           </li>
-          <li>
+          <li class="nav-item">
             <NuxtLink
               to="/lab-results"
               class="nav-link"
               exact-active-class="active"
-              title="Lab Results"
             >
-              <i class="fa-solid fa-vial" title="Lab Results"></i>
+              <i class="fa-solid fa-vial"></i>
+              <span class="tooltip">Lab Results</span>
             </NuxtLink>
           </li>
-          <li>
+          <li class="nav-item">
             <NuxtLink
               to="/patient-info"
               class="nav-link"
               exact-active-class="active"
-              title="Patient Info"
             >
-              <i class="fa-solid fa-user" title="Patient Info"></i>
+              <i class="fa-solid fa-user"></i>
+              <span class="tooltip">Patient Info</span>
             </NuxtLink>
           </li>
         </ul>
@@ -98,6 +95,11 @@
   flex-grow: 1;
 }
 
+/* Nav item for tooltip container */
+.nav-item {
+  position: relative;
+}
+
 /* Nav links */
 .nav-link {
   display: flex;
@@ -110,6 +112,7 @@
   transition: background 0.2s;
   width: 48px;
   margin-bottom: 5px;
+  position: relative;
 }
 
 .nav-link:hover,
@@ -120,6 +123,28 @@
 /* Icon style */
 .nav-link i {
   font-size: 18px;
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #4a5568;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease-in-out;
+  z-index: 1000;
+}
+
+.nav-link:hover .tooltip {
+  opacity: 1;
 }
 
 /* Main content */
