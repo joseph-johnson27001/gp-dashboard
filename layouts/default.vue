@@ -62,21 +62,34 @@
 </template>
 
 <style scoped>
-/* Layout container */
 .layout {
   display: flex;
   min-height: 100vh;
+  min-width: 100vw;
 }
 
-/* Sidebar */
 .sidebar {
   background: #2d3748;
   color: white;
   padding: 1rem 0;
   width: 60px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+}
+
+.main-content {
+  margin-left: 60px;
+  padding: 1.5rem 2rem;
+  background: #f7fafc;
+  height: 100vh;
+  overflow-y: auto;
+  flex-grow: 1;
 }
 
 /* Logo */
@@ -145,13 +158,5 @@
 
 .nav-link:hover .tooltip {
   opacity: 1;
-}
-
-/* Main content */
-.main-content {
-  flex: 1;
-  padding: 2rem;
-  background: #f7fafc;
-  overflow-x: auto;
 }
 </style>
