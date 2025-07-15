@@ -22,8 +22,14 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from "vue";
+
+// Import graph configs
+import { weightGraph } from "~/stores/graphs/weightGraph";
+import { bmiGraph } from "~/stores/graphs/bmiGraph";
+import { bloodPressureGraph } from "~/stores/graphs/bloodPressureGraph";
+import { heartRateGraph } from "~/stores/graphs/heartRateGraph";
 
 const patientName = ref("John Doe");
 const patientAge = ref(34);
@@ -39,61 +45,23 @@ const kpis = [
   { title: "Allergies", value: "Penicillin" },
 ];
 
-// Define chart options for each graph separately
+// Add chartOptions from imported graphs
 const graphs = [
   {
     title: "Weight Over Time",
-    chartOptions: {
-      tooltip: { trigger: "axis" },
-      xAxis: {
-        type: "category",
-        data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-      },
-      yAxis: { type: "value" },
-      series: [
-        { name: "Weight", type: "line", data: [72, 73, 71, 74, 72, 75, 73] },
-      ],
-    },
+    chartOptions: weightGraph,
   },
   {
     title: "BMI Over Time",
-    chartOptions: {
-      tooltip: { trigger: "axis" },
-      xAxis: { type: "category", data: ["Jan", "Feb", "Mar", "Apr", "May"] },
-      yAxis: { type: "value" },
-      series: [
-        { name: "BMI", type: "line", data: [22.9, 23.0, 23.1, 23.2, 23.1] },
-      ],
-    },
+    chartOptions: bmiGraph,
   },
   {
     title: "Blood Pressure Trends",
-    chartOptions: {
-      tooltip: { trigger: "axis" },
-      xAxis: {
-        type: "category",
-        data: ["Week 1", "Week 2", "Week 3", "Week 4"],
-      },
-      yAxis: { type: "value" },
-      series: [
-        { name: "Systolic", type: "line", data: [120, 122, 118, 121] },
-        { name: "Diastolic", type: "line", data: [80, 82, 79, 81] },
-      ],
-    },
+    chartOptions: bloodPressureGraph,
   },
   {
     title: "Heart Rate Trends",
-    chartOptions: {
-      tooltip: { trigger: "axis" },
-      xAxis: {
-        type: "category",
-        data: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
-      },
-      yAxis: { type: "value" },
-      series: [
-        { name: "Heart Rate", type: "line", data: [70, 72, 75, 73, 71] },
-      ],
-    },
+    chartOptions: heartRateGraph,
   },
 ];
 </script>
