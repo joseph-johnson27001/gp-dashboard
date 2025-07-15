@@ -66,6 +66,8 @@
   display: flex;
   min-height: 100vh;
   min-width: 100vw;
+  position: relative;
+  z-index: 0;
 }
 
 .sidebar {
@@ -80,16 +82,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
-}
-
-.main-content {
-  margin-left: 60px;
-  padding: 1.5rem 2rem;
-  background: #f7fafc;
-  height: 100vh;
-  overflow-y: auto;
-  flex-grow: 1;
+  overflow: visible;
+  z-index: 10;
 }
 
 /* Logo */
@@ -126,6 +120,7 @@
   width: 48px;
   margin-bottom: 5px;
   position: relative;
+  z-index: 1; /* above nav-item but below tooltip */
 }
 
 .nav-link:hover,
@@ -153,10 +148,22 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.15s ease-in-out;
-  z-index: 1000;
+  z-index: 20;
 }
 
 .nav-link:hover .tooltip {
   opacity: 1;
+}
+
+/* Main content */
+.main-content {
+  margin-left: 60px;
+  padding: 1.5rem 2rem;
+  background: #f7fafc;
+  height: 100vh;
+  overflow-y: auto;
+  flex-grow: 1;
+  position: relative;
+  z-index: 0;
 }
 </style>
