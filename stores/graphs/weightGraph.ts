@@ -5,13 +5,49 @@ export const weightGraph: EChartsOption = {
   xAxis: {
     type: "category",
     data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+    axisLine: {
+      lineStyle: { color: "#888" },
+    },
+    axisTick: { show: false },
   },
-  yAxis: { type: "value" },
+  yAxis: {
+    type: "value",
+    splitLine: {
+      lineStyle: { type: "dashed", color: "#eee" },
+    },
+    axisLine: { show: false },
+  },
   series: [
     {
       name: "Weight",
       type: "bar",
       data: [72, 73, 71, 74, 72, 75, 73],
+      barWidth: "70%",
+      itemStyle: {
+        borderRadius: [6, 6, 0, 0],
+        color: {
+          type: "linear",
+          x: 0,
+          y: 0,
+          x2: 0,
+          y2: 1,
+          colorStops: [
+            { offset: 0, color: "#4caf50" },
+            { offset: 1, color: "#087f23" },
+          ],
+        },
+        shadowColor: "rgba(0, 0, 0, 0.15)",
+        shadowBlur: 6,
+      },
+      emphasis: {
+        itemStyle: {
+          color: "#66bb6a",
+          shadowBlur: 10,
+          shadowColor: "rgba(0, 0, 0, 0.3)",
+        },
+      },
+      animationEasing: "cubicOut",
+      animationDuration: 800,
     },
   ],
 };
