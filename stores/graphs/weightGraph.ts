@@ -39,8 +39,8 @@ export const weightGraph: EChartsOption = {
           x2: 0,
           y2: 1,
           colorStops: [
-            { offset: 0, color: "#4caf50" },
-            { offset: 1, color: "#087f23" },
+            { offset: 0, color: "#3b82f6" },
+            { offset: 1, color: "#3b82f6" },
           ],
         },
         shadowColor: "rgba(0, 0, 0, 0.15)",
@@ -48,7 +48,7 @@ export const weightGraph: EChartsOption = {
       },
       emphasis: {
         itemStyle: {
-          color: "#66bb6a",
+          color: "#3b82f6",
           shadowBlur: 10,
           shadowColor: "rgba(0, 0, 0, 0.3)",
         },

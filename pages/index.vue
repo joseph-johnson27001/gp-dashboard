@@ -45,16 +45,16 @@ const kpis = [
   { title: "Allergies", value: "Penicillin" },
 ];
 
-// Add chartOptions from imported graphs
 const graphs = [
-  {
-    title: "BMI Over Time",
-    chartOptions: bmiGraph,
-  },
   {
     title: "Weight Over Time",
     chartOptions: weightGraph,
   },
+  {
+    title: "BMI Over Time",
+    chartOptions: bmiGraph,
+  },
+
   {
     title: "Blood Pressure Trends",
     chartOptions: bloodPressureGraph,
