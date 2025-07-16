@@ -96,7 +96,7 @@ const graphs = [
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 868px) {
   .kpi-grid {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -108,7 +108,7 @@ const graphs = [
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1600px) {
   .kpi-grid {
     grid-template-columns: repeat(8, 1fr);
   }
