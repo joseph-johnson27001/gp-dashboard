@@ -12,7 +12,20 @@ export const heartRateGraph: EChartsOption = {
   },
   xAxis: {
     type: "category",
-    data: ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5"],
+    data: [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
     boundaryGap: false,
     axisLine: {
       lineStyle: { color: "#cbd5e0" },
@@ -69,7 +82,7 @@ export const heartRateGraph: EChartsOption = {
           ],
         },
       },
-      data: [70, 72, 75, 73, 71],
+      data: [70, 72, 75, 73, 71, 74, 76, 78, 77, 75, 74, 73],
     },
   ],
 };
