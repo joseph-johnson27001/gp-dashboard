@@ -17,6 +17,7 @@
         :key="index"
         :title="graph.title"
         :chartOptions="graph.chartOptions"
+        :rangeValue="graph.rangeValue"
       />
     </div>
   </div>
@@ -49,19 +50,23 @@ const graphs = [
   {
     title: "Weight Over Time",
     chartOptions: weightGraph,
+    rangeValue: 7,
   },
   {
     title: "BMI Over Time",
     chartOptions: bmiGraph,
+    rangeValue: 30,
   },
 
   {
     title: "Blood Pressure Trends",
     chartOptions: bloodPressureGraph,
+    rangeValue: 90,
   },
   {
     title: "Heart Rate Trends",
     chartOptions: heartRateGraph,
+    rangeValue: 365,
   },
 ];
 </script>

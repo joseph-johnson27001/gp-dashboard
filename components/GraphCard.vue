@@ -21,19 +21,29 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 
 const props = defineProps({
   title: String,
   chartOptions: Object,
+  rangeValue: Number,
 });
 
 const emit = defineEmits(["update-range"]);
 
-const selectedRange = ref("30");
+const selectedRange = ref(String(props.rangeValue ?? 30));
+
+watch(
+  () => props.rangeValue,
+  (newVal) => {
+    if (newVal !== Number(selectedRange.value)) {
+      selectedRange.value = String(newVal);
+    }
+  }
+);
 
 function onRangeChange() {
-  emit("update-range", selectedRange.value);
+  emit("update-range", Number(selectedRange.value));
 }
 </script>
 
