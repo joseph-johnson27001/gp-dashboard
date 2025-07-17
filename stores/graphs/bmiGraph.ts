@@ -12,7 +12,23 @@ export const bmiGraph: EChartsOption = {
   },
   xAxis: {
     type: "category",
-    data: ["Jan", "Feb", "Mar", "Apr", "May"],
+    data: [
+      "Mar 1",
+      "Mar 3",
+      "Mar 5",
+      "Mar 7",
+      "Mar 9",
+      "Mar 11",
+      "Mar 13",
+      "Mar 15",
+      "Mar 17",
+      "Mar 19",
+      "Mar 21",
+      "Mar 23",
+      "Mar 25",
+      "Mar 27",
+      "Mar 29",
+    ],
     boundaryGap: false,
     axisLine: {
       lineStyle: { color: "#cbd5e0" },
@@ -71,7 +87,10 @@ export const bmiGraph: EChartsOption = {
           ],
         },
       },
-      data: [22.9, 23.0, 23.1, 23.2, 23.1],
+      data: [
+        22.9, 22.9, 22.8, 22.7, 22.6, 22.6, 22.5, 22.4, 22.3, 22.2, 22.1, 22.0,
+        21.9, 21.8, 21.7, 21.6, 21.5, 21,
+      ],
     },
   ],
 };
