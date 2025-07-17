@@ -12,7 +12,7 @@ export const bloodPressureGraph: EChartsOption = {
   },
   xAxis: {
     type: "category",
-    data: ["Week 1", "Week 2", "Week 3", "Week 4"],
+    data: ["Jan 1", "Jan 15", "Feb 1", "Feb 15", "Mar 1", "Mar 15"],
     boundaryGap: false,
     axisLine: {
       lineStyle: { color: "#cbd5e0" },
@@ -69,7 +69,7 @@ export const bloodPressureGraph: EChartsOption = {
           ],
         },
       },
-      data: [120, 122, 118, 121],
+      data: [120, 122, 118, 121, 120, 115],
     },
     {
       name: "Diastolic",
@@ -99,7 +99,7 @@ export const bloodPressureGraph: EChartsOption = {
           ],
         },
       },
-      data: [80, 82, 79, 81],
+      data: [80, 82, 79, 81, 78, 75],
     },
   ],
 };
